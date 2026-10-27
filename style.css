@@ -541,3 +541,48 @@ footer{
     text-decoration: none;
 }
 
+
+/* Fix My Projects on mobile Desktop site only */
+@media (hover: none) and (pointer: coarse) {
+    .cards {
+        display: grid !important;
+        grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+        justify-content: start !important;
+        align-items: start;
+        gap: 8px !important;
+    }
+
+    .cards > .project-link,
+    .cards > .card {
+        width: 100% !important;
+        min-width: 0 !important;
+        max-width: 100% !important;
+    }
+
+    .cards .card img {
+        width: 100%;
+        height: 90px !important;
+        object-fit: cover;
+    }
+
+    .cards .card div {
+        padding: 6px !important;
+    }
+
+    .cards .card h3 {
+        font-size: 11px !important;
+        line-height: 1.3;
+    }
+
+    .cards .card p {
+        font-size: 9px !important;
+        line-height: 1.4;
+    }
+
+    .cards .card span {
+        font-size: 8px !important;
+        padding: 2px 3px !important;
+        margin: 1px;
+    }
+}
+
