@@ -324,7 +324,7 @@ nav a:hover{
 
 .designs {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(min(100%, 220px), 220px));
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 220px), 200px));
     justify-content: center;
     gap: 20px;
     width: 100%;
@@ -554,3 +554,30 @@ footer{
     text-decoration: none;
 }
 
+/* Fix layout for mobile phones using Desktop site */
+@media (hover: none) and (pointer: coarse) {
+    .designs {
+        display: flex !important;
+        flex-wrap: wrap !important;
+        justify-content: flex-start !important;
+        align-items: flex-start;
+        gap: 10px !important;
+    }
+
+    .designs > * {
+        flex: 0 0 160px !important;
+        width: 160px !important;
+        max-width: 160px !important;
+    }
+
+    .designs img {
+        width: 100%;
+        height: 160px;
+        object-fit: cover;
+    }
+
+    .skills,
+    .cards {
+        justify-content: flex-start !important;
+    }
+}
