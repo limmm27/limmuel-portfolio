@@ -324,7 +324,7 @@ nav a:hover{
 
 .designs {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(min(100%, 220px), 200px));
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 200px), 200px));
     justify-content: center;
     gap: 20px;
     width: 100%;
@@ -464,32 +464,19 @@ footer{
     nav{gap:10px}
     nav a{font-size:12px}
     section{padding:65px 5%}
-
-    .home{
-        flex-direction:column-reverse;
-        text-align:center;
-        padding-top:120px
-    }
-
+    .home{flex-direction:column-reverse;text-align:center;padding-top:120px}
     .home h1{font-size:45px}
     .profile-frame{width:280px;height:280px}
     .socials{justify-content:center}
     .about{flex-direction:column}
     .info{flex-direction:column}
-
-    .skills,.cards,.designs{
-        grid-template-columns:repeat(2,minmax(0,1fr))
-    }
-
+    .skills,.cards,.designs{grid-template-columns:repeat(2,minmax(0,1fr))}
     .contact-details{grid-template-columns:1fr}
 }
 
 @media(max-width:500px){
     nav{display:none}
-
-    .skills,.cards,.designs{
-        grid-template-columns:1fr
-    }
+    .skills,.cards,.designs{grid-template-columns:1fr}
 }
 
 @media (hover: none) and (pointer: coarse){
@@ -500,7 +487,7 @@ footer{
         margin-bottom:16px
     }
 
-    .skills,.cards{
+    .skills{
         grid-template-columns:repeat(2,minmax(0,1fr)) !important;
         gap:10px !important
     }
@@ -542,6 +529,11 @@ footer{
         padding:3px 5px
     }
 
+    .cards{
+        grid-template-columns:repeat(3,minmax(0,1fr)) !important;
+        gap:10px !important
+    }
+
     .education{
         padding:14px !important
     }
@@ -554,30 +546,3 @@ footer{
     text-decoration: none;
 }
 
-/* Fix layout for mobile phones using Desktop site */
-@media (hover: none) and (pointer: coarse) {
-    .designs {
-        display: flex !important;
-        flex-wrap: wrap !important;
-        justify-content: flex-start !important;
-        align-items: flex-start;
-        gap: 10px !important;
-    }
-
-    .designs > * {
-        flex: 0 0 160px !important;
-        width: 160px !important;
-        max-width: 160px !important;
-    }
-
-    .designs img {
-        width: 100%;
-        height: 160px;
-        object-fit: cover;
-    }
-
-    .skills,
-    .cards {
-        justify-content: flex-start !important;
-    }
-}
