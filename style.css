@@ -592,3 +592,11 @@ footer{
     }
 }
 
+/* My Designs - Chrome Desktop site on mobile */
+@media (hover: none) and (pointer: coarse) and (min-width: 501px) {
+    .designs {
+        grid-template-columns: repeat(4, 140px) !important;
+        justify-content: start !important;
+        gap: 10px !important;
+    }
+}
