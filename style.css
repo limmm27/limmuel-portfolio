@@ -591,3 +591,17 @@ footer{
         grid-template-columns: minmax(0, 1fr) !important;
     }
 }
+
+@media (hover: none) and (pointer: coarse) and (min-width: 501px) {
+    .designs {
+        grid-template-columns: repeat(4, minmax(0, 140px)) !important;
+        justify-content: start !important;
+        gap: 10px !important;
+    }
+
+    .designs > div {
+        width: 100% !important;
+        min-width: 0 !important;
+        max-width: 140px !important;
+    }
+}
