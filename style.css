@@ -476,7 +476,8 @@ footer{
 
 @media(max-width:500px){
     nav{display:none}
-    .skills,.cards,.designs{grid-template-columns:1fr}
+    .skills,.designs{grid-template-columns:1fr}
+    .cards{grid-template-columns:1fr !important}
 }
 
 @media (hover: none) and (pointer: coarse){
@@ -487,10 +488,15 @@ footer{
         margin-bottom:16px
     }
 
-    .skills,.cards{
+    .skills{
         grid-template-columns:repeat(2,minmax(0,1fr)) !important;
         gap:10px !important
     }
+
+    .cards{
+    grid-template-columns:repeat(3,minmax(0,1fr)) !important;
+    gap:8px !important
+}
 
     .skill{
         padding:12px 8px !important
