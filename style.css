@@ -585,3 +585,9 @@ footer{
     }
 }
 
+/* Normal mobile view: one project per row */
+@media screen and (max-width: 500px) {
+    .cards {
+        grid-template-columns: minmax(0, 1fr) !important;
+    }
+}
